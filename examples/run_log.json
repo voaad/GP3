@@ -1,0 +1,2728 @@
+{
+  "runs": [
+    {
+      "timestamp": "2026-04-27T22:37:47.924033",
+      "dataset": "../input/diabetic_data.csv",
+      "data_source_channel": "input_folder",
+      "target": "readmitted",
+      "task_type": "multiclass",
+      "detected_text_column": null,
+      "new_features": [
+        "time_in_hospital_x_num_medications",
+        "num_lab_procedures_x_num_procedures",
+        "num_medications_div_time_in_hospital",
+        "number_inpatient_div_number_diagnoses"
+      ],
+      "best_model": "logreg",
+      "best_score": 0.4327,
+      "best_metric": "recall_priority_class",
+      "metric_strategy": "medical_high_risk_multiclass",
+      "all_metrics": {
+        "logreg": {
+          "accuracy": 0.4848,
+          "f1_weighted": 0.4755,
+          "f1_macro": 0.412,
+          "precision_weighted": 0.501,
+          "precision_macro": 0.4225,
+          "recall_weighted": 0.4848,
+          "recall_macro": 0.4487,
+          "balanced_accuracy": 0.4487,
+          "matthews_corrcoef": 0.1633,
+          "cohen_kappa": 0.1568,
+          "recall_priority_class": 0.4327,
+          "precision_priority_class": 0.2158,
+          "f1_priority_class": 0.288,
+          "pr_auc_priority_class": 0.2409,
+          "roc_auc_priority_class": 0.6716,
+          "roc_auc_ovr_macro": 0.6488,
+          "log_loss": 1.0221
+        },
+        "rf": {
+          "accuracy": 0.5735,
+          "f1_weighted": 0.5645,
+          "f1_macro": 0.4778,
+          "precision_weighted": 0.5622,
+          "precision_macro": 0.483,
+          "recall_weighted": 0.5735,
+          "recall_macro": 0.4778,
+          "balanced_accuracy": 0.4778,
+          "matthews_corrcoef": 0.2627,
+          "cohen_kappa": 0.2604,
+          "recall_priority_class": 0.2469,
+          "precision_priority_class": 0.2638,
+          "f1_priority_class": 0.2551,
+          "pr_auc_priority_class": 0.2481,
+          "roc_auc_priority_class": 0.68,
+          "roc_auc_ovr_macro": 0.6969,
+          "log_loss": 0.947
+        },
+        "gb": {
+          "accuracy": 0.5125,
+          "f1_weighted": 0.5204,
+          "f1_macro": 0.4534,
+          "precision_weighted": 0.5427,
+          "precision_macro": 0.4568,
+          "recall_weighted": 0.5125,
+          "recall_macro": 0.4772,
+          "balanced_accuracy": 0.4772,
+          "matthews_corrcoef": 0.2137,
+          "cohen_kappa": 0.21,
+          "recall_priority_class": 0.4261,
+          "precision_priority_class": 0.2245,
+          "f1_priority_class": 0.294,
+          "pr_auc_priority_class": 0.2649,
+          "roc_auc_priority_class": 0.682,
+          "roc_auc_ovr_macro": 0.6774,
+          "log_loss": 0.9821
+        }
+      },
+      "llm_decisions_count": 8,
+      "retries": 0,
+      "training_errors_count": 0
+    },
+    {
+      "timestamp": "2026-04-27T22:59:05.289874",
+      "dataset": "../input/diabetic_data.csv",
+      "data_source_channel": "input_folder",
+      "target": "readmitted",
+      "task_type": "multiclass",
+      "detected_text_column": null,
+      "new_features": [
+        "time_in_hospital_x_num_medications",
+        "num_lab_procedures_x_num_procedures",
+        "number_inpatient_x_number_diagnoses",
+        "num_medications_div_time_in_hospital",
+        "number_outpatient_div_number_emergency"
+      ],
+      "best_model": "gb",
+      "best_score": 0.4247,
+      "best_metric": "recall_priority_class",
+      "metric_strategy": "medical_high_risk_multiclass",
+      "all_metrics": {
+        "logreg": {
+          "accuracy": 0.4959,
+          "f1_weighted": 0.4703,
+          "f1_macro": 0.4058,
+          "precision_weighted": 0.5025,
+          "precision_macro": 0.4266,
+          "recall_weighted": 0.4959,
+          "recall_macro": 0.4491,
+          "balanced_accuracy": 0.4491,
+          "matthews_corrcoef": 0.1702,
+          "cohen_kappa": 0.1594,
+          "recall_priority_class": 0.4225,
+          "precision_priority_class": 0.2228,
+          "f1_priority_class": 0.2917,
+          "pr_auc_priority_class": 0.2288,
+          "roc_auc_priority_class": 0.6553,
+          "roc_auc_ovr_macro": 0.6229,
+          "log_loss": 1.0564
+        },
+        "rf": {
+          "accuracy": 0.5735,
+          "f1_weighted": 0.5645,
+          "f1_macro": 0.4772,
+          "precision_weighted": 0.5635,
+          "precision_macro": 0.4829,
+          "recall_weighted": 0.5735,
+          "recall_macro": 0.4779,
+          "balanced_accuracy": 0.4779,
+          "matthews_corrcoef": 0.2635,
+          "cohen_kappa": 0.2608,
+          "recall_priority_class": 0.2487,
+          "precision_priority_class": 0.2566,
+          "f1_priority_class": 0.2526,
+          "pr_auc_priority_class": 0.2472,
+          "roc_auc_priority_class": 0.6752,
+          "roc_auc_ovr_macro": 0.6955,
+          "log_loss": 0.9475
+        },
+        "gb": {
+          "accuracy": 0.5163,
+          "f1_weighted": 0.5238,
+          "f1_macro": 0.4566,
+          "precision_weighted": 0.5455,
+          "precision_macro": 0.4597,
+          "recall_weighted": 0.5163,
+          "recall_macro": 0.4797,
+          "balanced_accuracy": 0.4797,
+          "matthews_corrcoef": 0.2184,
+          "cohen_kappa": 0.2147,
+          "recall_priority_class": 0.4247,
+          "precision_priority_class": 0.227,
+          "f1_priority_class": 0.2958,
+          "pr_auc_priority_class": 0.2638,
+          "roc_auc_priority_class": 0.681,
+          "roc_auc_ovr_macro": 0.678,
+          "log_loss": 0.9788
+        }
+      },
+      "llm_decisions_count": 9,
+      "retries": 0,
+      "training_errors_count": 0
+    },
+    {
+      "timestamp": "2026-04-27T23:08:51.152455",
+      "dataset": "../input/diabetic_data.csv",
+      "data_source_channel": "input_folder",
+      "target": "readmitted",
+      "task_type": "multiclass",
+      "detected_text_column": "clinical_note",
+      "new_features": [
+        "time_in_hospital_x_num_medications",
+        "num_lab_procedures_x_num_procedures",
+        "number_inpatient_x_number_diagnoses",
+        "num_medications_div_time_in_hospital",
+        "number_outpatient_div_number_emergency",
+        "text_note_length",
+        "text_diabetes_term_count",
+        "text_medication_change_flag",
+        "text_insulin_status_terms",
+        "text_emergency_visit_count"
+      ],
+      "best_model": "logreg",
+      "best_score": 0.2927,
+      "best_metric": "recall_priority_class",
+      "metric_strategy": "medical_high_risk_multiclass",
+      "all_metrics": {
+        "logreg": {
+          "accuracy": 0.3999,
+          "f1_weighted": 0.4188,
+          "f1_macro": 0.3584,
+          "precision_weighted": 0.4524,
+          "precision_macro": 0.3688,
+          "recall_weighted": 0.3999,
+          "recall_macro": 0.3718,
+          "balanced_accuracy": 0.3718,
+          "matthews_corrcoef": 0.0604,
+          "cohen_kappa": 0.0589,
+          "recall_priority_class": 0.2927,
+          "precision_priority_class": 0.1378,
+          "f1_priority_class": 0.1874,
+          "pr_auc_priority_class": 0.1347,
+          "roc_auc_priority_class": 0.5329,
+          "roc_auc_ovr_macro": 0.5441,
+          "log_loss": 1.0964
+        },
+        "rf": {
+          "accuracy": 0.59,
+          "f1_weighted": 0.5791,
+          "f1_macro": 0.4871,
+          "precision_weighted": 0.5733,
+          "precision_macro": 0.4973,
+          "recall_weighted": 0.59,
+          "recall_macro": 0.4837,
+          "balanced_accuracy": 0.4837,
+          "matthews_corrcoef": 0.2841,
+          "cohen_kappa": 0.2822,
+          "recall_priority_class": 0.2095,
+          "precision_priority_class": 0.2878,
+          "f1_priority_class": 0.2425,
+          "pr_auc_priority_class": 0.2578,
+          "roc_auc_priority_class": 0.6836,
+          "roc_auc_ovr_macro": 0.7108,
+          "log_loss": 0.9295
+        }
+      },
+      "llm_decisions_count": 9,
+      "retries": 0,
+      "training_errors_count": 0
+    },
+    {
+      "timestamp": "2026-04-27T23:37:11.798442",
+      "dataset": "../input/diabetic_data.csv",
+      "data_source_channel": "input_folder",
+      "target": "readmitted",
+      "task_type": "multiclass",
+      "detected_text_column": "clinical_note",
+      "new_features": [
+        "time_in_hospital_x_num_medications",
+        "num_lab_procedures_x_num_procedures",
+        "num_medications_div_time_in_hospital",
+        "number_inpatient_div_number_outpatient",
+        "text_note_length",
+        "text_diabetes_term_count",
+        "text_medication_change_flag",
+        "text_insulin_status_terms"
+      ],
+      "best_model": "logreg",
+      "best_score": 0.4419,
+      "best_metric": "recall_priority_class",
+      "metric_strategy": "medical_high_risk_multiclass",
+      "all_metrics": {
+        "logreg": {
+          "accuracy": 0.4968,
+          "f1_weighted": 0.4864,
+          "f1_macro": 0.4221,
+          "precision_weighted": 0.514,
+          "precision_macro": 0.4347,
+          "recall_weighted": 0.4968,
+          "recall_macro": 0.4594,
+          "balanced_accuracy": 0.4594,
+          "matthews_corrcoef": 0.1821,
+          "cohen_kappa": 0.1745,
+          "recall_priority_class": 0.4419,
+          "precision_priority_class": 0.2224,
+          "f1_priority_class": 0.2959,
+          "pr_auc_priority_class": 0.2427,
+          "roc_auc_priority_class": 0.675,
+          "roc_auc_ovr_macro": 0.6573,
+          "log_loss": 1.0161
+        },
+        "rf": {
+          "accuracy": 0.5521,
+          "f1_weighted": 0.5396,
+          "f1_macro": 0.4554,
+          "precision_weighted": 0.5354,
+          "precision_macro": 0.4641,
+          "recall_weighted": 0.5521,
+          "recall_macro": 0.4543,
+          "balanced_accuracy": 0.4543,
+          "matthews_corrcoef": 0.218,
+          "cohen_kappa": 0.2153,
+          "recall_priority_class": 0.2196,
+          "precision_priority_class": 0.2702,
+          "f1_priority_class": 0.2423,
+          "pr_auc_priority_class": 0.2416,
+          "roc_auc_priority_class": 0.6697,
+          "roc_auc_ovr_macro": 0.6721,
+          "log_loss": 0.9622
+        }
+      },
+      "llm_decisions_count": 11,
+      "retries": 0,
+      "training_errors_count": 0
+    },
+    {
+      "timestamp": "2026-04-27T23:55:08.917113",
+      "dataset": "../input/diabetic_data.csv",
+      "data_source_channel": "input_folder",
+      "target": "readmitted",
+      "task_type": "multiclass",
+      "detected_text_column": "clinical_note",
+      "new_features": [
+        "time_in_hospital_x_num_medications",
+        "num_lab_procedures_x_num_procedures",
+        "number_inpatient_x_number_diagnoses",
+        "num_medications_div_time_in_hospital",
+        "number_outpatient_div_number_emergency",
+        "text_clinical_note_length",
+        "text_diabetes_term_count",
+        "text_medication_change_flag",
+        "text_insulin_status_terms"
+      ],
+      "best_model": "logreg",
+      "best_score": 0.3961,
+      "best_metric": "recall_priority_class",
+      "metric_strategy": "medical_high_risk_multiclass",
+      "all_metrics": {
+        "logreg": {
+          "accuracy": 0.4849,
+          "f1_weighted": 0.495,
+          "f1_macro": 0.4165,
+          "precision_weighted": 0.5212,
+          "precision_macro": 0.4237,
+          "recall_weighted": 0.4849,
+          "recall_macro": 0.4414,
+          "balanced_accuracy": 0.4414,
+          "matthews_corrcoef": 0.1576,
+          "cohen_kappa": 0.1541,
+          "recall_priority_class": 0.3961,
+          "precision_priority_class": 0.1874,
+          "f1_priority_class": 0.2545,
+          "pr_auc_priority_class": 0.2008,
+          "roc_auc_priority_class": 0.6477,
+          "roc_auc_ovr_macro": 0.6375,
+          "log_loss": 1.0436
+        },
+        "rf": {
+          "accuracy": 0.5702,
+          "f1_weighted": 0.565,
+          "f1_macro": 0.4676,
+          "precision_weighted": 0.5647,
+          "precision_macro": 0.4704,
+          "recall_weighted": 0.5702,
+          "recall_macro": 0.4692,
+          "balanced_accuracy": 0.4692,
+          "matthews_corrcoef": 0.2444,
+          "cohen_kappa": 0.2429,
+          "recall_priority_class": 0.257,
+          "precision_priority_class": 0.2336,
+          "f1_priority_class": 0.2448,
+          "pr_auc_priority_class": 0.2249,
+          "roc_auc_priority_class": 0.6727,
+          "roc_auc_ovr_macro": 0.6908,
+          "log_loss": 0.9605
+        },
+        "extra_trees": {
+          "accuracy": 0.6349,
+          "f1_weighted": 0.6166,
+          "f1_macro": 0.4921,
+          "precision_weighted": 0.6074,
+          "precision_macro": 0.5096,
+          "recall_weighted": 0.6349,
+          "recall_macro": 0.4896,
+          "balanced_accuracy": 0.4896,
+          "matthews_corrcoef": 0.3363,
+          "cohen_kappa": 0.3323,
+          "recall_priority_class": 0.1391,
+          "precision_priority_class": 0.2546,
+          "f1_priority_class": 0.1799,
+          "pr_auc_priority_class": 0.2237,
+          "roc_auc_priority_class": 0.6818,
+          "roc_auc_ovr_macro": 0.7398,
+          "log_loss": 0.9083
+        }
+      },
+      "llm_decisions_count": 11,
+      "retries": 0,
+      "training_errors_count": 0,
+      "feature_importance": [
+        {
+          "feature": "number_inpatient",
+          "importance": 0.4802,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "number_inpatient_x_number_diagnoses",
+          "importance": 0.2534,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "number_emergency",
+          "importance": 0.092,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "number_diagnoses",
+          "importance": 0.0832,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "time_in_hospital_x_num_medications",
+          "importance": 0.0757,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "discharge_disposition_id",
+          "importance": 0.0697,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "num_medications",
+          "importance": 0.0565,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "diabetesMed",
+          "importance": 0.0547,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "num_procedures",
+          "importance": 0.054,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "clinical_note",
+          "importance": 0.0529,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "time_in_hospital",
+          "importance": 0.0512,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "text_clinical_note_length",
+          "importance": 0.0411,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "age",
+          "importance": 0.0382,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "num_medications_div_time_in_hospital",
+          "importance": 0.0345,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "metformin-rosiglitazone",
+          "importance": 0.0341,
+          "method": "abs_coefficients"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-04-28T00:10:29.646993",
+      "dataset": "../input/diabetic_data.csv",
+      "data_source_channel": "input_folder",
+      "target": "readmitted",
+      "task_type": "multiclass",
+      "detected_text_column": "clinical_note",
+      "new_features": [
+        "time_in_hospital_x_num_medications",
+        "num_lab_procedures_x_num_procedures",
+        "num_medications_div_time_in_hospital",
+        "number_inpatient_div_number_diagnoses",
+        "text_note_length",
+        "text_diabetes_term_count",
+        "text_medication_change_flag",
+        "text_insulin_status_terms"
+      ],
+      "best_model": "logreg",
+      "best_score": 0.3692781690140845,
+      "best_metric": "recall_priority_class",
+      "metric_strategy": "medical_high_risk_multiclass",
+      "all_metrics": {
+        "logreg": {
+          "accuracy": 0.5277,
+          "f1_weighted": 0.5079,
+          "f1_macro": 0.4237,
+          "precision_weighted": 0.5071,
+          "precision_macro": 0.4347,
+          "recall_weighted": 0.5277,
+          "recall_macro": 0.428,
+          "balanced_accuracy": 0.428,
+          "matthews_corrcoef": 0.1723,
+          "cohen_kappa": 0.1674,
+          "recall_priority_class": 0.2091,
+          "precision_priority_class": 0.2375,
+          "f1_priority_class": 0.2224,
+          "pr_auc_priority_class": 0.2113,
+          "roc_auc_priority_class": 0.6392,
+          "roc_auc_ovr_macro": 0.6386,
+          "log_loss": 0.9586,
+          "recall_priority_class_tuned": 0.3693,
+          "precision_priority_class_tuned": 0.2087,
+          "threshold_used": 0.3
+        },
+        "rf": {
+          "accuracy": 0.568,
+          "f1_weighted": 0.54,
+          "f1_macro": 0.4442,
+          "precision_weighted": 0.5404,
+          "precision_macro": 0.4848,
+          "recall_weighted": 0.568,
+          "recall_macro": 0.4432,
+          "balanced_accuracy": 0.4432,
+          "matthews_corrcoef": 0.2231,
+          "cohen_kappa": 0.2142,
+          "recall_priority_class": 0.1417,
+          "precision_priority_class": 0.3326,
+          "f1_priority_class": 0.1988,
+          "pr_auc_priority_class": 0.2394,
+          "roc_auc_priority_class": 0.6717,
+          "roc_auc_ovr_macro": 0.672,
+          "log_loss": 0.914
+        },
+        "gb": {
+          "accuracy": 0.5792,
+          "f1_weighted": 0.5495,
+          "f1_macro": 0.4443,
+          "precision_weighted": 0.551,
+          "precision_macro": 0.4987,
+          "recall_weighted": 0.5792,
+          "recall_macro": 0.4453,
+          "balanced_accuracy": 0.4453,
+          "matthews_corrcoef": 0.2396,
+          "cohen_kappa": 0.2308,
+          "recall_priority_class": 0.107,
+          "precision_priority_class": 0.3563,
+          "f1_priority_class": 0.1645,
+          "pr_auc_priority_class": 0.2433,
+          "roc_auc_priority_class": 0.6713,
+          "roc_auc_ovr_macro": 0.677,
+          "log_loss": 0.8858
+        },
+        "extra_trees": {
+          "accuracy": 0.5711,
+          "f1_weighted": 0.537,
+          "f1_macro": 0.4343,
+          "precision_weighted": 0.5414,
+          "precision_macro": 0.4895,
+          "recall_weighted": 0.5711,
+          "recall_macro": 0.4368,
+          "balanced_accuracy": 0.4368,
+          "matthews_corrcoef": 0.223,
+          "cohen_kappa": 0.2111,
+          "recall_priority_class": 0.1127,
+          "precision_priority_class": 0.3469,
+          "f1_priority_class": 0.1701,
+          "pr_auc_priority_class": 0.2389,
+          "roc_auc_priority_class": 0.6585,
+          "roc_auc_ovr_macro": 0.6657,
+          "log_loss": 0.9261
+        }
+      },
+      "llm_decisions_count": 11,
+      "retries": 2,
+      "training_errors_count": 2,
+      "feature_importance": [
+        {
+          "feature": "change",
+          "importance": 1.3881,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "text_medication_change_flag",
+          "importance": 1.2864,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "number_inpatient_div_number_diagnoses",
+          "importance": 0.9096,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "number_inpatient",
+          "importance": 0.4218,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "num_procedures",
+          "importance": 0.2975,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "num_lab_procedures_x_num_procedures",
+          "importance": 0.2618,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "discharge_disposition_id",
+          "importance": 0.2596,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "metformin",
+          "importance": 0.1031,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "number_diagnoses",
+          "importance": 0.086,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "glipizide",
+          "importance": 0.08,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "num_lab_procedures",
+          "importance": 0.0797,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "number_emergency",
+          "importance": 0.0756,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "pioglitazone",
+          "importance": 0.0736,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "insulin",
+          "importance": 0.0704,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "glyburide",
+          "importance": 0.0699,
+          "method": "abs_coefficients"
+        }
+      ],
+      "threshold_info": {
+        "threshold": 0.3,
+        "tuned_recall": 0.3693,
+        "tuned_precision": 0.2087,
+        "default_recall": 0.2091,
+        "improved": true
+      },
+      "balance_strategy": "smote"
+    },
+    {
+      "timestamp": "2026-04-28T00:37:07.394119",
+      "dataset": "../input/diabetic_data.csv",
+      "data_source_channel": "input_folder",
+      "target": "readmitted",
+      "task_type": "multiclass",
+      "detected_text_column": "clinical_note",
+      "new_features": [
+        "time_in_hospital_x_num_medications",
+        "num_lab_procedures_x_num_procedures",
+        "number_inpatient_x_number_diagnoses",
+        "num_medications_div_time_in_hospital",
+        "number_outpatient_div_number_emergency",
+        "text_note_length",
+        "text_diabetes_term_count",
+        "text_medication_change_flag",
+        "text_insulin_status_terms"
+      ],
+      "best_model": "logreg",
+      "best_score": 0.22007042253521128,
+      "best_metric": "recall_priority_class",
+      "metric_strategy": "medical_high_risk_multiclass",
+      "all_metrics": {
+        "logreg": {
+          "accuracy": 0.5404,
+          "f1_weighted": 0.5111,
+          "f1_macro": 0.404,
+          "precision_weighted": 0.512,
+          "precision_macro": 0.4255,
+          "recall_weighted": 0.5404,
+          "recall_macro": 0.4084,
+          "balanced_accuracy": 0.4084,
+          "matthews_corrcoef": 0.1524,
+          "cohen_kappa": 0.1446,
+          "recall_priority_class": 0.1545,
+          "precision_priority_class": 0.2022,
+          "f1_priority_class": 0.1751,
+          "pr_auc_priority_class": 0.1676,
+          "roc_auc_priority_class": 0.5898,
+          "roc_auc_ovr_macro": 0.6042,
+          "log_loss": 0.9739,
+          "recall_priority_class_tuned": 0.2201,
+          "precision_priority_class_tuned": 0.2049,
+          "threshold_used": 0.35
+        },
+        "rf": {
+          "accuracy": 0.5699,
+          "f1_weighted": 0.5392,
+          "f1_macro": 0.4243,
+          "precision_weighted": 0.5352,
+          "precision_macro": 0.461,
+          "recall_weighted": 0.5699,
+          "recall_macro": 0.4245,
+          "balanced_accuracy": 0.4245,
+          "matthews_corrcoef": 0.196,
+          "cohen_kappa": 0.1876,
+          "recall_priority_class": 0.1127,
+          "precision_priority_class": 0.2756,
+          "f1_priority_class": 0.16,
+          "pr_auc_priority_class": 0.197,
+          "roc_auc_priority_class": 0.6485,
+          "roc_auc_ovr_macro": 0.6536,
+          "log_loss": 0.9244
+        },
+        "gb": {
+          "accuracy": 0.584,
+          "f1_weighted": 0.5504,
+          "f1_macro": 0.4264,
+          "precision_weighted": 0.551,
+          "precision_macro": 0.4905,
+          "recall_weighted": 0.584,
+          "recall_macro": 0.4291,
+          "balanced_accuracy": 0.4291,
+          "matthews_corrcoef": 0.2173,
+          "cohen_kappa": 0.2082,
+          "recall_priority_class": 0.0783,
+          "precision_priority_class": 0.3456,
+          "f1_priority_class": 0.1277,
+          "pr_auc_priority_class": 0.2156,
+          "roc_auc_priority_class": 0.6636,
+          "roc_auc_ovr_macro": 0.6711,
+          "log_loss": 0.8795
+        },
+        "extra_trees": {
+          "accuracy": 0.5711,
+          "f1_weighted": 0.5323,
+          "f1_macro": 0.4122,
+          "precision_weighted": 0.5323,
+          "precision_macro": 0.4612,
+          "recall_weighted": 0.5711,
+          "recall_macro": 0.4162,
+          "balanced_accuracy": 0.4162,
+          "matthews_corrcoef": 0.1894,
+          "cohen_kappa": 0.1771,
+          "recall_priority_class": 0.0924,
+          "precision_priority_class": 0.2826,
+          "f1_priority_class": 0.1393,
+          "pr_auc_priority_class": 0.1929,
+          "roc_auc_priority_class": 0.6313,
+          "roc_auc_ovr_macro": 0.6443,
+          "log_loss": 0.9317
+        }
+      },
+      "llm_decisions_count": 11,
+      "retries": 2,
+      "training_errors_count": 2,
+      "feature_importance": [
+        {
+          "feature": "change",
+          "importance": 1.3704,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "text_medication_change_flag",
+          "importance": 1.2718,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "number_inpatient_x_number_diagnoses",
+          "importance": 0.5728,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "number_inpatient",
+          "importance": 0.3199,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "num_procedures",
+          "importance": 0.3088,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "num_lab_procedures_x_num_procedures",
+          "importance": 0.2659,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "text_diabetes_term_count",
+          "importance": 0.1128,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "metformin",
+          "importance": 0.0912,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "insulin",
+          "importance": 0.0788,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "discharge_disposition_id",
+          "importance": 0.0779,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "glipizide",
+          "importance": 0.0725,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "pioglitazone",
+          "importance": 0.071,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "num_lab_procedures",
+          "importance": 0.0685,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "number_emergency",
+          "importance": 0.0683,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "glyburide",
+          "importance": 0.0668,
+          "method": "abs_coefficients"
+        }
+      ],
+      "threshold_info": {
+        "threshold": 0.35,
+        "tuned_recall": 0.2201,
+        "tuned_precision": 0.2049,
+        "default_recall": 0.1545,
+        "improved": true
+      },
+      "balance_strategy": "smote"
+    },
+    {
+      "timestamp": "2026-04-28T00:50:45.381373",
+      "dataset": "../input/diabetic_data.csv",
+      "data_source_channel": "input_folder",
+      "target": "readmitted",
+      "task_type": "multiclass",
+      "detected_text_column": "clinical_note",
+      "new_features": [
+        "time_in_hospital_x_num_medications",
+        "num_lab_procedures_x_num_procedures",
+        "number_inpatient_x_number_diagnoses",
+        "num_medications_div_time_in_hospital",
+        "number_outpatient_div_number_emergency",
+        "text_note_length",
+        "text_diabetes_term_count",
+        "text_medication_change_flag",
+        "text_insulin_status_terms"
+      ],
+      "best_model": "logreg",
+      "best_score": 0.4920774647887324,
+      "best_metric": "recall_priority_class",
+      "metric_strategy": "medical_high_risk_multiclass",
+      "all_metrics": {
+        "logreg": {
+          "accuracy": 0.4955,
+          "f1_weighted": 0.4868,
+          "f1_macro": 0.4231,
+          "precision_weighted": 0.5141,
+          "precision_macro": 0.4346,
+          "recall_weighted": 0.4955,
+          "recall_macro": 0.4602,
+          "balanced_accuracy": 0.4602,
+          "matthews_corrcoef": 0.1817,
+          "cohen_kappa": 0.1745,
+          "recall_priority_class": 0.4463,
+          "precision_priority_class": 0.2226,
+          "f1_priority_class": 0.297,
+          "pr_auc_priority_class": 0.2431,
+          "roc_auc_priority_class": 0.6753,
+          "roc_auc_ovr_macro": 0.6568,
+          "log_loss": 1.0153,
+          "recall_priority_class_tuned": 0.4921,
+          "precision_priority_class_tuned": 0.2107,
+          "threshold_used": 0.35
+        },
+        "rf": {
+          "accuracy": 0.5463,
+          "f1_weighted": 0.5389,
+          "f1_macro": 0.4636,
+          "precision_weighted": 0.5371,
+          "precision_macro": 0.4664,
+          "recall_weighted": 0.5463,
+          "recall_macro": 0.4652,
+          "balanced_accuracy": 0.4652,
+          "matthews_corrcoef": 0.2192,
+          "cohen_kappa": 0.2175,
+          "recall_priority_class": 0.2786,
+          "precision_priority_class": 0.2771,
+          "f1_priority_class": 0.2779,
+          "pr_auc_priority_class": 0.2568,
+          "roc_auc_priority_class": 0.6794,
+          "roc_auc_ovr_macro": 0.6767,
+          "log_loss": 0.9739
+        },
+        "gb": {
+          "accuracy": 0.5209,
+          "f1_weighted": 0.5289,
+          "f1_macro": 0.462,
+          "precision_weighted": 0.5474,
+          "precision_macro": 0.4624,
+          "recall_weighted": 0.5209,
+          "recall_macro": 0.4824,
+          "balanced_accuracy": 0.4824,
+          "matthews_corrcoef": 0.2227,
+          "cohen_kappa": 0.2199,
+          "recall_priority_class": 0.4159,
+          "precision_priority_class": 0.234,
+          "f1_priority_class": 0.2995,
+          "pr_auc_priority_class": 0.2649,
+          "roc_auc_priority_class": 0.682,
+          "roc_auc_ovr_macro": 0.6784,
+          "log_loss": 0.9746
+        },
+        "extra_trees": {
+          "accuracy": 0.5551,
+          "f1_weighted": 0.545,
+          "f1_macro": 0.4558,
+          "precision_weighted": 0.5398,
+          "precision_macro": 0.4718,
+          "recall_weighted": 0.5551,
+          "recall_macro": 0.4516,
+          "balanced_accuracy": 0.4516,
+          "matthews_corrcoef": 0.2214,
+          "cohen_kappa": 0.2205,
+          "recall_priority_class": 0.1699,
+          "precision_priority_class": 0.294,
+          "f1_priority_class": 0.2153,
+          "pr_auc_priority_class": 0.247,
+          "roc_auc_priority_class": 0.6675,
+          "roc_auc_ovr_macro": 0.6709,
+          "log_loss": 0.9738
+        }
+      },
+      "llm_decisions_count": 11,
+      "retries": 2,
+      "training_errors_count": 2,
+      "feature_importance": [
+        {
+          "feature": "number_inpatient",
+          "importance": 0.4572,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "discharge_disposition_id",
+          "importance": 0.2253,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "number_inpatient_x_number_diagnoses",
+          "importance": 0.2186,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "number_emergency",
+          "importance": 0.0992,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "number_diagnoses",
+          "importance": 0.0775,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "clinical_note",
+          "importance": 0.063,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "diabetesMed",
+          "importance": 0.0558,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "time_in_hospital_x_num_medications",
+          "importance": 0.051,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "age",
+          "importance": 0.0453,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "num_procedures",
+          "importance": 0.0445,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "text_note_length",
+          "importance": 0.042,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "num_medications",
+          "importance": 0.0362,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "race",
+          "importance": 0.0353,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "gender",
+          "importance": 0.0346,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "num_lab_procedures_x_num_procedures",
+          "importance": 0.0345,
+          "method": "abs_coefficients"
+        }
+      ],
+      "threshold_info": {
+        "threshold": 0.35,
+        "tuned_recall": 0.4921,
+        "tuned_precision": 0.2107,
+        "default_recall": 0.4463,
+        "improved": true
+      },
+      "balance_strategy": "undersample"
+    },
+    {
+      "timestamp": "2026-04-28T01:02:12.953696",
+      "dataset": "../input/diabetic_data.csv",
+      "data_source_channel": "input_folder",
+      "target": "readmitted",
+      "task_type": "multiclass",
+      "detected_text_column": "clinical_note",
+      "new_features": [
+        "time_in_hospital_x_num_medications",
+        "num_lab_procedures_x_num_procedures",
+        "number_inpatient_x_number_diagnoses",
+        "num_medications_div_time_in_hospital",
+        "number_outpatient_div_number_inpatient",
+        "text_note_length",
+        "text_diabetes_term_count",
+        "text_medication_change_flag",
+        "text_emergency_visits_regex"
+      ],
+      "best_model": "logreg",
+      "best_score": 0.4894366197183099,
+      "best_metric": "recall_priority_class",
+      "metric_strategy": "medical_high_risk_multiclass",
+      "all_metrics": {
+        "logreg": {
+          "accuracy": 0.4932,
+          "f1_weighted": 0.4847,
+          "f1_macro": 0.4205,
+          "precision_weighted": 0.5109,
+          "precision_macro": 0.4314,
+          "recall_weighted": 0.4932,
+          "recall_macro": 0.4569,
+          "balanced_accuracy": 0.4569,
+          "matthews_corrcoef": 0.1775,
+          "cohen_kappa": 0.1705,
+          "recall_priority_class": 0.4397,
+          "precision_priority_class": 0.2202,
+          "f1_priority_class": 0.2935,
+          "pr_auc_priority_class": 0.2419,
+          "roc_auc_priority_class": 0.6746,
+          "roc_auc_ovr_macro": 0.6561,
+          "log_loss": 1.0158,
+          "recall_priority_class_tuned": 0.4894,
+          "precision_priority_class_tuned": 0.2094,
+          "threshold_used": 0.35
+        },
+        "rf": {
+          "accuracy": 0.5446,
+          "f1_weighted": 0.5372,
+          "f1_macro": 0.4622,
+          "precision_weighted": 0.5358,
+          "precision_macro": 0.4648,
+          "recall_weighted": 0.5446,
+          "recall_macro": 0.4644,
+          "balanced_accuracy": 0.4644,
+          "matthews_corrcoef": 0.2171,
+          "cohen_kappa": 0.2154,
+          "recall_priority_class": 0.2817,
+          "precision_priority_class": 0.2746,
+          "f1_priority_class": 0.2781,
+          "pr_auc_priority_class": 0.2522,
+          "roc_auc_priority_class": 0.678,
+          "roc_auc_ovr_macro": 0.6751,
+          "log_loss": 0.9732
+        },
+        "gb": {
+          "accuracy": 0.5225,
+          "f1_weighted": 0.53,
+          "f1_macro": 0.4634,
+          "precision_weighted": 0.5479,
+          "precision_macro": 0.4636,
+          "recall_weighted": 0.5225,
+          "recall_macro": 0.4838,
+          "balanced_accuracy": 0.4838,
+          "matthews_corrcoef": 0.2241,
+          "cohen_kappa": 0.2214,
+          "recall_priority_class": 0.4168,
+          "precision_priority_class": 0.2367,
+          "f1_priority_class": 0.302,
+          "pr_auc_priority_class": 0.2714,
+          "roc_auc_priority_class": 0.6851,
+          "roc_auc_ovr_macro": 0.6803,
+          "log_loss": 0.9738
+        },
+        "extra_trees": {
+          "accuracy": 0.5554,
+          "f1_weighted": 0.5442,
+          "f1_macro": 0.4523,
+          "precision_weighted": 0.54,
+          "precision_macro": 0.4736,
+          "recall_weighted": 0.5554,
+          "recall_macro": 0.4486,
+          "balanced_accuracy": 0.4486,
+          "matthews_corrcoef": 0.2203,
+          "cohen_kappa": 0.2192,
+          "recall_priority_class": 0.1505,
+          "precision_priority_class": 0.3011,
+          "f1_priority_class": 0.2007,
+          "pr_auc_priority_class": 0.2431,
+          "roc_auc_priority_class": 0.6671,
+          "roc_auc_ovr_macro": 0.6707,
+          "log_loss": 0.9696
+        }
+      },
+      "llm_decisions_count": 11,
+      "retries": 2,
+      "training_errors_count": 2,
+      "feature_importance": [
+        {
+          "feature": "number_inpatient",
+          "importance": 0.4597,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "discharge_disposition_id",
+          "importance": 0.226,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "number_inpatient_x_number_diagnoses",
+          "importance": 0.2197,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "number_emergency",
+          "importance": 0.0951,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "number_diagnoses",
+          "importance": 0.0774,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "clinical_note",
+          "importance": 0.0631,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "diabetesMed",
+          "importance": 0.0556,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "time_in_hospital_x_num_medications",
+          "importance": 0.0515,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "num_procedures",
+          "importance": 0.0464,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "age",
+          "importance": 0.0449,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "num_medications",
+          "importance": 0.0376,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "race",
+          "importance": 0.0366,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "num_lab_procedures_x_num_procedures",
+          "importance": 0.0352,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "gender",
+          "importance": 0.0351,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "time_in_hospital",
+          "importance": 0.0343,
+          "method": "abs_coefficients"
+        }
+      ],
+      "threshold_info": {
+        "threshold": 0.35,
+        "tuned_recall": 0.4894,
+        "tuned_precision": 0.2094,
+        "default_recall": 0.4397,
+        "improved": true
+      },
+      "balance_strategy": "undersample"
+    },
+    {
+      "timestamp": "2026-04-28T01:23:09.317887",
+      "dataset": "../input/diabetic_data.csv",
+      "data_source_channel": "input_folder",
+      "target": "readmitted",
+      "task_type": "multiclass",
+      "detected_text_column": null,
+      "new_features": [
+        "time_in_hospital_x_num_medications",
+        "num_lab_procedures_x_num_procedures",
+        "number_inpatient_x_number_emergency",
+        "num_medications_div_time_in_hospital",
+        "number_inpatient_div_time_in_hospital"
+      ],
+      "best_model": "gb",
+      "best_score": 0.44014084507042256,
+      "best_metric": "recall_priority_class",
+      "metric_strategy": "medical_high_risk_multiclass",
+      "all_metrics": {
+        "logreg": {
+          "accuracy": 0.5004,
+          "f1_weighted": 0.5119,
+          "f1_macro": 0.4306,
+          "precision_weighted": 0.5347,
+          "precision_macro": 0.4349,
+          "recall_weighted": 0.5004,
+          "recall_macro": 0.45,
+          "balanced_accuracy": 0.45,
+          "matthews_corrcoef": 0.1781,
+          "cohen_kappa": 0.1753,
+          "recall_priority_class": 0.3719,
+          "precision_priority_class": 0.1911,
+          "f1_priority_class": 0.2525,
+          "pr_auc_priority_class": 0.1999,
+          "roc_auc_priority_class": 0.6465,
+          "roc_auc_ovr_macro": 0.6467,
+          "log_loss": 1.037
+        },
+        "rf": {
+          "accuracy": 0.5631,
+          "f1_weighted": 0.5651,
+          "f1_macro": 0.4724,
+          "precision_weighted": 0.5679,
+          "precision_macro": 0.4722,
+          "recall_weighted": 0.5631,
+          "recall_macro": 0.4732,
+          "balanced_accuracy": 0.4732,
+          "matthews_corrcoef": 0.2463,
+          "cohen_kappa": 0.246,
+          "recall_priority_class": 0.2416,
+          "precision_priority_class": 0.2416,
+          "f1_priority_class": 0.2416,
+          "pr_auc_priority_class": 0.224,
+          "roc_auc_priority_class": 0.667,
+          "roc_auc_ovr_macro": 0.6839,
+          "log_loss": 0.9717
+        },
+        "gb": {
+          "accuracy": 0.5399,
+          "f1_weighted": 0.5567,
+          "f1_macro": 0.4758,
+          "precision_weighted": 0.585,
+          "precision_macro": 0.4769,
+          "recall_weighted": 0.5399,
+          "recall_macro": 0.4944,
+          "balanced_accuracy": 0.4944,
+          "matthews_corrcoef": 0.2533,
+          "cohen_kappa": 0.2497,
+          "recall_priority_class": 0.3838,
+          "precision_priority_class": 0.2155,
+          "f1_priority_class": 0.276,
+          "pr_auc_priority_class": 0.2441,
+          "roc_auc_priority_class": 0.6813,
+          "roc_auc_ovr_macro": 0.6986,
+          "log_loss": 0.9631,
+          "recall_priority_class_tuned": 0.4401,
+          "precision_priority_class_tuned": 0.215,
+          "threshold_used": 0.375
+        },
+        "extra_trees": {
+          "accuracy": 0.5679,
+          "f1_weighted": 0.563,
+          "f1_macro": 0.4621,
+          "precision_weighted": 0.5648,
+          "precision_macro": 0.4751,
+          "recall_weighted": 0.5679,
+          "recall_macro": 0.4611,
+          "balanced_accuracy": 0.4611,
+          "matthews_corrcoef": 0.2437,
+          "cohen_kappa": 0.2419,
+          "recall_priority_class": 0.1611,
+          "precision_priority_class": 0.2654,
+          "f1_priority_class": 0.2005,
+          "pr_auc_priority_class": 0.2247,
+          "roc_auc_priority_class": 0.6633,
+          "roc_auc_ovr_macro": 0.6805,
+          "log_loss": 0.9776
+        }
+      },
+      "llm_decisions_count": 11,
+      "retries": 2,
+      "training_errors_count": 2,
+      "feature_importance": [
+        {
+          "feature": "patient_nbr",
+          "importance": 0.0479,
+          "method": "permutation"
+        },
+        {
+          "feature": "encounter_id",
+          "importance": 0.0337,
+          "method": "permutation"
+        },
+        {
+          "feature": "discharge_disposition_id",
+          "importance": 0.0284,
+          "method": "permutation"
+        },
+        {
+          "feature": "number_inpatient",
+          "importance": 0.0231,
+          "method": "permutation"
+        },
+        {
+          "feature": "number_outpatient",
+          "importance": 0.0077,
+          "method": "permutation"
+        },
+        {
+          "feature": "number_inpatient_div_time_in_hospital",
+          "importance": 0.0068,
+          "method": "permutation"
+        },
+        {
+          "feature": "number_emergency",
+          "importance": 0.0061,
+          "method": "permutation"
+        },
+        {
+          "feature": "age",
+          "importance": 0.0048,
+          "method": "permutation"
+        },
+        {
+          "feature": "diag_1",
+          "importance": 0.0046,
+          "method": "permutation"
+        },
+        {
+          "feature": "number_diagnoses",
+          "importance": 0.0033,
+          "method": "permutation"
+        },
+        {
+          "feature": "change",
+          "importance": 0.0031,
+          "method": "permutation"
+        },
+        {
+          "feature": "admission_source_id",
+          "importance": 0.0023,
+          "method": "permutation"
+        },
+        {
+          "feature": "num_medications",
+          "importance": 0.0018,
+          "method": "permutation"
+        },
+        {
+          "feature": "diag_3",
+          "importance": 0.0017,
+          "method": "permutation"
+        },
+        {
+          "feature": "medical_specialty",
+          "importance": 0.0017,
+          "method": "permutation"
+        }
+      ],
+      "threshold_info": {
+        "threshold": 0.375,
+        "tuned_recall": 0.4401,
+        "tuned_precision": 0.215,
+        "default_recall": 0.3838,
+        "improved": true
+      },
+      "balance_strategy": "undersample",
+      "tool_calls_total": 11
+    },
+    {
+      "timestamp": "2026-04-28T01:34:32.742032",
+      "dataset": "../input/diabetic_data.csv",
+      "data_source_channel": "input_folder",
+      "target": "readmitted",
+      "task_type": "multiclass",
+      "detected_text_column": null,
+      "new_features": [
+        "time_in_hospital_x_num_medications",
+        "num_lab_procedures_x_num_procedures",
+        "number_inpatient_x_number_diagnoses",
+        "num_medications_div_time_in_hospital",
+        "number_outpatient_div_number_emergency"
+      ],
+      "best_model": "rf",
+      "best_score": 0.4933978873239437,
+      "best_metric": "recall_priority_class",
+      "metric_strategy": "medical_high_risk_multiclass",
+      "all_metrics": {
+        "logreg": {
+          "accuracy": 0.4942,
+          "f1_weighted": 0.4865,
+          "f1_macro": 0.4228,
+          "precision_weighted": 0.5121,
+          "precision_macro": 0.4327,
+          "recall_weighted": 0.4942,
+          "recall_macro": 0.459,
+          "balanced_accuracy": 0.459,
+          "matthews_corrcoef": 0.1794,
+          "cohen_kappa": 0.1727,
+          "recall_priority_class": 0.4437,
+          "precision_priority_class": 0.2226,
+          "f1_priority_class": 0.2964,
+          "pr_auc_priority_class": 0.2426,
+          "roc_auc_priority_class": 0.6745,
+          "roc_auc_ovr_macro": 0.6565,
+          "log_loss": 1.0158
+        },
+        "rf": {
+          "accuracy": 0.5457,
+          "f1_weighted": 0.5384,
+          "f1_macro": 0.4623,
+          "precision_weighted": 0.5366,
+          "precision_macro": 0.4651,
+          "recall_weighted": 0.5457,
+          "recall_macro": 0.4638,
+          "balanced_accuracy": 0.4638,
+          "matthews_corrcoef": 0.2183,
+          "cohen_kappa": 0.2167,
+          "recall_priority_class": 0.2742,
+          "precision_priority_class": 0.273,
+          "f1_priority_class": 0.2736,
+          "pr_auc_priority_class": 0.253,
+          "roc_auc_priority_class": 0.6801,
+          "roc_auc_ovr_macro": 0.6771,
+          "log_loss": 0.9727,
+          "recall_priority_class_tuned": 0.4934,
+          "precision_priority_class_tuned": 0.2112,
+          "threshold_used": 0.325
+        },
+        "gb": {
+          "accuracy": 0.5229,
+          "f1_weighted": 0.5304,
+          "f1_macro": 0.4647,
+          "precision_weighted": 0.5485,
+          "precision_macro": 0.4647,
+          "recall_weighted": 0.5229,
+          "recall_macro": 0.4859,
+          "balanced_accuracy": 0.4859,
+          "matthews_corrcoef": 0.2254,
+          "cohen_kappa": 0.2226,
+          "recall_priority_class": 0.4243,
+          "precision_priority_class": 0.2396,
+          "f1_priority_class": 0.3063,
+          "pr_auc_priority_class": 0.2706,
+          "roc_auc_priority_class": 0.6851,
+          "roc_auc_ovr_macro": 0.6795,
+          "log_loss": 0.9727
+        },
+        "extra_trees": {
+          "accuracy": 0.5564,
+          "f1_weighted": 0.5473,
+          "f1_macro": 0.4642,
+          "precision_weighted": 0.5426,
+          "precision_macro": 0.4797,
+          "recall_weighted": 0.5564,
+          "recall_macro": 0.4586,
+          "balanced_accuracy": 0.4586,
+          "matthews_corrcoef": 0.2247,
+          "cohen_kappa": 0.2239,
+          "recall_priority_class": 0.1967,
+          "precision_priority_class": 0.3166,
+          "f1_priority_class": 0.2427,
+          "pr_auc_priority_class": 0.2522,
+          "roc_auc_priority_class": 0.6725,
+          "roc_auc_ovr_macro": 0.6738,
+          "log_loss": 0.9721
+        }
+      },
+      "llm_decisions_count": 11,
+      "retries": 2,
+      "training_errors_count": 2,
+      "feature_importance": [
+        {
+          "feature": "discharge_disposition_id",
+          "importance": 0.1075,
+          "method": "tree_based"
+        },
+        {
+          "feature": "number_inpatient_x_number_diagnoses",
+          "importance": 0.0827,
+          "method": "tree_based"
+        },
+        {
+          "feature": "number_inpatient",
+          "importance": 0.0725,
+          "method": "tree_based"
+        },
+        {
+          "feature": "clinical_note",
+          "importance": 0.0585,
+          "method": "tree_based"
+        },
+        {
+          "feature": "diag_1",
+          "importance": 0.0526,
+          "method": "tree_based"
+        },
+        {
+          "feature": "time_in_hospital_x_num_medications",
+          "importance": 0.0518,
+          "method": "tree_based"
+        },
+        {
+          "feature": "num_lab_procedures",
+          "importance": 0.0496,
+          "method": "tree_based"
+        },
+        {
+          "feature": "diag_2",
+          "importance": 0.048,
+          "method": "tree_based"
+        },
+        {
+          "feature": "diag_3",
+          "importance": 0.0474,
+          "method": "tree_based"
+        },
+        {
+          "feature": "num_medications_div_time_in_hospital",
+          "importance": 0.0465,
+          "method": "tree_based"
+        },
+        {
+          "feature": "num_medications",
+          "importance": 0.0402,
+          "method": "tree_based"
+        },
+        {
+          "feature": "num_lab_procedures_x_num_procedures",
+          "importance": 0.0343,
+          "method": "tree_based"
+        },
+        {
+          "feature": "number_diagnoses",
+          "importance": 0.0319,
+          "method": "tree_based"
+        },
+        {
+          "feature": "age",
+          "importance": 0.0308,
+          "method": "tree_based"
+        },
+        {
+          "feature": "time_in_hospital",
+          "importance": 0.0248,
+          "method": "tree_based"
+        }
+      ],
+      "threshold_info": {
+        "threshold": 0.325,
+        "tuned_recall": 0.4934,
+        "tuned_precision": 0.2112,
+        "default_recall": 0.4437,
+        "improved": true
+      },
+      "balance_strategy": "undersample",
+      "tool_calls_total": 19
+    },
+    {
+      "timestamp": "2026-04-28T01:44:34.940167",
+      "dataset": "../input/diabetic_data.csv",
+      "data_source_channel": "input_folder",
+      "target": "readmitted",
+      "task_type": "multiclass",
+      "detected_text_column": null,
+      "new_features": [
+        "number_inpatient_div_number_diagnoses",
+        "number_inpatient_div_number_emergency"
+      ],
+      "best_model": "gb",
+      "best_score": 0.44190140845070425,
+      "best_metric": "recall_priority_class",
+      "metric_strategy": "medical_high_risk_multiclass",
+      "all_metrics": {
+        "logreg": {
+          "accuracy": 0.4884,
+          "f1_weighted": 0.4975,
+          "f1_macro": 0.4194,
+          "precision_weighted": 0.52,
+          "precision_macro": 0.4238,
+          "recall_weighted": 0.4884,
+          "recall_macro": 0.442,
+          "balanced_accuracy": 0.442,
+          "matthews_corrcoef": 0.1578,
+          "cohen_kappa": 0.155,
+          "recall_priority_class": 0.3856,
+          "precision_priority_class": 0.193,
+          "f1_priority_class": 0.2572,
+          "pr_auc_priority_class": 0.2008,
+          "roc_auc_priority_class": 0.6466,
+          "roc_auc_ovr_macro": 0.6355,
+          "log_loss": 1.0433
+        },
+        "rf": {
+          "accuracy": 0.5428,
+          "f1_weighted": 0.5435,
+          "f1_macro": 0.4548,
+          "precision_weighted": 0.5454,
+          "precision_macro": 0.4535,
+          "recall_weighted": 0.5428,
+          "recall_macro": 0.4581,
+          "balanced_accuracy": 0.4581,
+          "matthews_corrcoef": 0.2087,
+          "cohen_kappa": 0.2083,
+          "recall_priority_class": 0.2746,
+          "precision_priority_class": 0.2312,
+          "f1_priority_class": 0.2511,
+          "pr_auc_priority_class": 0.22,
+          "roc_auc_priority_class": 0.6643,
+          "roc_auc_ovr_macro": 0.6649,
+          "log_loss": 0.9921
+        },
+        "gb": {
+          "accuracy": 0.5109,
+          "f1_weighted": 0.5281,
+          "f1_macro": 0.4534,
+          "precision_weighted": 0.5585,
+          "precision_macro": 0.4554,
+          "recall_weighted": 0.5109,
+          "recall_macro": 0.4764,
+          "balanced_accuracy": 0.4764,
+          "matthews_corrcoef": 0.2114,
+          "cohen_kappa": 0.2078,
+          "recall_priority_class": 0.4093,
+          "precision_priority_class": 0.2102,
+          "f1_priority_class": 0.2777,
+          "pr_auc_priority_class": 0.2438,
+          "roc_auc_priority_class": 0.678,
+          "roc_auc_ovr_macro": 0.6745,
+          "log_loss": 0.989,
+          "recall_priority_class_tuned": 0.4419,
+          "precision_priority_class_tuned": 0.2105,
+          "threshold_used": 0.375
+        },
+        "extra_trees": {
+          "accuracy": 0.5533,
+          "f1_weighted": 0.5488,
+          "f1_macro": 0.4509,
+          "precision_weighted": 0.5473,
+          "precision_macro": 0.4598,
+          "recall_weighted": 0.5533,
+          "recall_macro": 0.4485,
+          "balanced_accuracy": 0.4485,
+          "matthews_corrcoef": 0.2137,
+          "cohen_kappa": 0.2131,
+          "recall_priority_class": 0.1721,
+          "precision_priority_class": 0.2546,
+          "f1_priority_class": 0.2054,
+          "pr_auc_priority_class": 0.2145,
+          "roc_auc_priority_class": 0.6563,
+          "roc_auc_ovr_macro": 0.6616,
+          "log_loss": 0.9896
+        }
+      },
+      "llm_decisions_count": 11,
+      "retries": 2,
+      "training_errors_count": 2,
+      "feature_importance": [
+        {
+          "feature": "discharge_disposition_id",
+          "importance": 0.0283,
+          "method": "permutation"
+        },
+        {
+          "feature": "number_inpatient_div_number_diagnoses",
+          "importance": 0.0187,
+          "method": "permutation"
+        },
+        {
+          "feature": "number_outpatient",
+          "importance": 0.0101,
+          "method": "permutation"
+        },
+        {
+          "feature": "admission_source_id",
+          "importance": 0.0098,
+          "method": "permutation"
+        },
+        {
+          "feature": "diag_1",
+          "importance": 0.0071,
+          "method": "permutation"
+        },
+        {
+          "feature": "number_emergency",
+          "importance": 0.0066,
+          "method": "permutation"
+        },
+        {
+          "feature": "number_inpatient",
+          "importance": 0.0057,
+          "method": "permutation"
+        },
+        {
+          "feature": "age",
+          "importance": 0.0047,
+          "method": "permutation"
+        },
+        {
+          "feature": "diabetesMed",
+          "importance": 0.0039,
+          "method": "permutation"
+        },
+        {
+          "feature": "number_inpatient_div_number_emergency",
+          "importance": 0.0038,
+          "method": "permutation"
+        },
+        {
+          "feature": "medical_specialty",
+          "importance": 0.0032,
+          "method": "permutation"
+        },
+        {
+          "feature": "diag_2",
+          "importance": 0.0031,
+          "method": "permutation"
+        },
+        {
+          "feature": "admission_type_id",
+          "importance": 0.0021,
+          "method": "permutation"
+        },
+        {
+          "feature": "num_lab_procedures",
+          "importance": 0.002,
+          "method": "permutation"
+        },
+        {
+          "feature": "num_procedures",
+          "importance": 0.002,
+          "method": "permutation"
+        }
+      ],
+      "threshold_info": {
+        "threshold": 0.375,
+        "tuned_recall": 0.4419,
+        "tuned_precision": 0.2105,
+        "default_recall": 0.4093,
+        "improved": true
+      },
+      "balance_strategy": "undersample",
+      "tool_calls_total": 19
+    },
+    {
+      "timestamp": "2026-04-28T02:12:39.360660",
+      "dataset": "../input/diabetic_data.csv",
+      "data_source_channel": "input_folder",
+      "target": "readmitted",
+      "task_type": "multiclass",
+      "detected_text_column": null,
+      "new_features": [
+        "number_inpatient_div_discharge_disposition_id",
+        "number_inpatient_div_number_diagnoses"
+      ],
+      "best_model": "logreg",
+      "best_score": 0.49735915492957744,
+      "best_metric": "recall_priority_class",
+      "metric_strategy": "medical_high_risk_multiclass",
+      "all_metrics": {
+        "logreg": {
+          "accuracy": 0.49,
+          "f1_weighted": 0.4849,
+          "f1_macro": 0.4212,
+          "precision_weighted": 0.5099,
+          "precision_macro": 0.4299,
+          "recall_weighted": 0.49,
+          "recall_macro": 0.4561,
+          "balanced_accuracy": 0.4561,
+          "matthews_corrcoef": 0.1747,
+          "cohen_kappa": 0.1686,
+          "recall_priority_class": 0.4406,
+          "precision_priority_class": 0.2189,
+          "f1_priority_class": 0.2925,
+          "pr_auc_priority_class": 0.2421,
+          "roc_auc_priority_class": 0.6731,
+          "roc_auc_ovr_macro": 0.6562,
+          "log_loss": 1.0144,
+          "recall_priority_class_tuned": 0.4974,
+          "precision_priority_class_tuned": 0.2055,
+          "threshold_used": 0.35
+        },
+        "rf": {
+          "accuracy": 0.5479,
+          "f1_weighted": 0.5407,
+          "f1_macro": 0.4674,
+          "precision_weighted": 0.5406,
+          "precision_macro": 0.4699,
+          "recall_weighted": 0.5479,
+          "recall_macro": 0.4708,
+          "balanced_accuracy": 0.4708,
+          "matthews_corrcoef": 0.2246,
+          "cohen_kappa": 0.2226,
+          "recall_priority_class": 0.2989,
+          "precision_priority_class": 0.2786,
+          "f1_priority_class": 0.2884,
+          "pr_auc_priority_class": 0.2613,
+          "roc_auc_priority_class": 0.6822,
+          "roc_auc_ovr_macro": 0.6781,
+          "log_loss": 0.9755
+        },
+        "gb": {
+          "accuracy": 0.5247,
+          "f1_weighted": 0.5325,
+          "f1_macro": 0.4662,
+          "precision_weighted": 0.5513,
+          "precision_macro": 0.4667,
+          "recall_weighted": 0.5247,
+          "recall_macro": 0.4874,
+          "balanced_accuracy": 0.4874,
+          "matthews_corrcoef": 0.2289,
+          "cohen_kappa": 0.226,
+          "recall_priority_class": 0.4243,
+          "precision_priority_class": 0.2383,
+          "f1_priority_class": 0.3052,
+          "pr_auc_priority_class": 0.275,
+          "roc_auc_priority_class": 0.6919,
+          "roc_auc_ovr_macro": 0.6839,
+          "log_loss": 0.9728
+        },
+        "extra_trees": {
+          "accuracy": 0.5561,
+          "f1_weighted": 0.5464,
+          "f1_macro": 0.4635,
+          "precision_weighted": 0.541,
+          "precision_macro": 0.4759,
+          "recall_weighted": 0.5561,
+          "recall_macro": 0.4587,
+          "balanced_accuracy": 0.4587,
+          "matthews_corrcoef": 0.224,
+          "cohen_kappa": 0.223,
+          "recall_priority_class": 0.2051,
+          "precision_priority_class": 0.304,
+          "f1_priority_class": 0.2449,
+          "pr_auc_priority_class": 0.2559,
+          "roc_auc_priority_class": 0.675,
+          "roc_auc_ovr_macro": 0.6736,
+          "log_loss": 0.9753
+        }
+      },
+      "llm_decisions_count": 11,
+      "retries": 2,
+      "training_errors_count": 2,
+      "feature_importance": [
+        {
+          "feature": "discharge_disposition_id",
+          "importance": 0.2574,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "number_inpatient_div_discharge_disposition_id",
+          "importance": 0.1627,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "number_inpatient_div_number_diagnoses",
+          "importance": 0.1002,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "number_emergency",
+          "importance": 0.0926,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "number_diagnoses",
+          "importance": 0.0752,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "number_inpatient",
+          "importance": 0.0645,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "clinical_note",
+          "importance": 0.0639,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "diabetesMed",
+          "importance": 0.0534,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "age",
+          "importance": 0.0517,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "race",
+          "importance": 0.0389,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "number_outpatient",
+          "importance": 0.0372,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "gender",
+          "importance": 0.0359,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "metformin",
+          "importance": 0.0335,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "weight",
+          "importance": 0.0246,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "medical_specialty",
+          "importance": 0.0219,
+          "method": "abs_coefficients"
+        }
+      ],
+      "threshold_info": {
+        "threshold": 0.35,
+        "tuned_recall": 0.4974,
+        "tuned_precision": 0.2055,
+        "default_recall": 0.4406,
+        "improved": true
+      },
+      "balance_strategy": "undersample",
+      "tool_calls_total": 19
+    },
+    {
+      "timestamp": "2026-04-28T02:31:14.452914",
+      "dataset": "../input/diabetic_data.csv",
+      "data_source_channel": "input_folder",
+      "target": "readmitted",
+      "task_type": "multiclass",
+      "detected_text_column": null,
+      "new_features": [
+        "number_inpatient_div_number_diagnoses",
+        "number_inpatient_div_number_emergency"
+      ],
+      "best_model": "gb",
+      "best_score": 0.445862676056338,
+      "best_metric": "recall_priority_class",
+      "metric_strategy": "medical_high_risk_multiclass",
+      "all_metrics": {
+        "logreg": {
+          "accuracy": 0.4878,
+          "f1_weighted": 0.497,
+          "f1_macro": 0.4184,
+          "precision_weighted": 0.5194,
+          "precision_macro": 0.4229,
+          "recall_weighted": 0.4878,
+          "recall_macro": 0.4407,
+          "balanced_accuracy": 0.4407,
+          "matthews_corrcoef": 0.1567,
+          "cohen_kappa": 0.1539,
+          "recall_priority_class": 0.382,
+          "precision_priority_class": 0.1916,
+          "f1_priority_class": 0.2552,
+          "pr_auc_priority_class": 0.2012,
+          "roc_auc_priority_class": 0.6472,
+          "roc_auc_ovr_macro": 0.6352,
+          "log_loss": 1.0438
+        },
+        "rf": {
+          "accuracy": 0.5419,
+          "f1_weighted": 0.5421,
+          "f1_macro": 0.4507,
+          "precision_weighted": 0.543,
+          "precision_macro": 0.4499,
+          "recall_weighted": 0.5419,
+          "recall_macro": 0.4526,
+          "balanced_accuracy": 0.4526,
+          "matthews_corrcoef": 0.2049,
+          "cohen_kappa": 0.2047,
+          "recall_priority_class": 0.2522,
+          "precision_priority_class": 0.2248,
+          "f1_priority_class": 0.2377,
+          "pr_auc_priority_class": 0.217,
+          "roc_auc_priority_class": 0.6597,
+          "roc_auc_ovr_macro": 0.6618,
+          "log_loss": 0.9904
+        },
+        "gb": {
+          "accuracy": 0.5105,
+          "f1_weighted": 0.5273,
+          "f1_macro": 0.4534,
+          "precision_weighted": 0.557,
+          "precision_macro": 0.4551,
+          "recall_weighted": 0.5105,
+          "recall_macro": 0.477,
+          "balanced_accuracy": 0.477,
+          "matthews_corrcoef": 0.2101,
+          "cohen_kappa": 0.2065,
+          "recall_priority_class": 0.4146,
+          "precision_priority_class": 0.2128,
+          "f1_priority_class": 0.2813,
+          "pr_auc_priority_class": 0.2393,
+          "roc_auc_priority_class": 0.6789,
+          "roc_auc_ovr_macro": 0.6734,
+          "log_loss": 0.992,
+          "recall_priority_class_tuned": 0.4459,
+          "precision_priority_class_tuned": 0.2125,
+          "threshold_used": 0.375
+        },
+        "extra_trees": {
+          "accuracy": 0.5561,
+          "f1_weighted": 0.548,
+          "f1_macro": 0.4436,
+          "precision_weighted": 0.5463,
+          "precision_macro": 0.4597,
+          "recall_weighted": 0.5561,
+          "recall_macro": 0.4423,
+          "balanced_accuracy": 0.4423,
+          "matthews_corrcoef": 0.213,
+          "cohen_kappa": 0.2118,
+          "recall_priority_class": 0.1347,
+          "precision_priority_class": 0.2571,
+          "f1_priority_class": 0.1768,
+          "pr_auc_priority_class": 0.2074,
+          "roc_auc_priority_class": 0.6485,
+          "roc_auc_ovr_macro": 0.6566,
+          "log_loss": 0.9862
+        }
+      },
+      "llm_decisions_count": 11,
+      "retries": 2,
+      "training_errors_count": 2,
+      "feature_importance": [
+        {
+          "feature": "discharge_disposition_id",
+          "importance": 0.0278,
+          "method": "permutation"
+        },
+        {
+          "feature": "number_inpatient_div_number_diagnoses",
+          "importance": 0.0207,
+          "method": "permutation"
+        },
+        {
+          "feature": "number_outpatient",
+          "importance": 0.0125,
+          "method": "permutation"
+        },
+        {
+          "feature": "admission_source_id",
+          "importance": 0.0101,
+          "method": "permutation"
+        },
+        {
+          "feature": "diag_1",
+          "importance": 0.0093,
+          "method": "permutation"
+        },
+        {
+          "feature": "number_emergency",
+          "importance": 0.0075,
+          "method": "permutation"
+        },
+        {
+          "feature": "number_inpatient",
+          "importance": 0.0064,
+          "method": "permutation"
+        },
+        {
+          "feature": "diag_2",
+          "importance": 0.0063,
+          "method": "permutation"
+        },
+        {
+          "feature": "age",
+          "importance": 0.0062,
+          "method": "permutation"
+        },
+        {
+          "feature": "number_inpatient_div_number_emergency",
+          "importance": 0.0048,
+          "method": "permutation"
+        },
+        {
+          "feature": "diabetesMed",
+          "importance": 0.0045,
+          "method": "permutation"
+        },
+        {
+          "feature": "num_lab_procedures",
+          "importance": 0.0042,
+          "method": "permutation"
+        },
+        {
+          "feature": "num_procedures",
+          "importance": 0.0038,
+          "method": "permutation"
+        },
+        {
+          "feature": "diag_3",
+          "importance": 0.0034,
+          "method": "permutation"
+        },
+        {
+          "feature": "time_in_hospital",
+          "importance": 0.0032,
+          "method": "permutation"
+        }
+      ],
+      "threshold_info": {
+        "threshold": 0.375,
+        "tuned_recall": 0.4459,
+        "tuned_precision": 0.2125,
+        "default_recall": 0.4146,
+        "improved": true
+      },
+      "balance_strategy": "undersample",
+      "tool_calls_total": 26
+    },
+    {
+      "timestamp": "2026-04-28T03:01:43.147833",
+      "dataset": "../input/diabetic_data.csv",
+      "data_source_channel": "input_folder",
+      "target": "readmitted",
+      "task_type": "multiclass",
+      "detected_text_column": null,
+      "new_features": [
+        "admission_type_id_plus_discharge_disposition_id",
+        "discharge_disposition_id_plus_admission_source_id"
+      ],
+      "best_model": "logreg",
+      "best_score": 0.47491197183098594,
+      "best_metric": "recall_priority_class",
+      "metric_strategy": "medical_high_risk_multiclass",
+      "all_metrics": {
+        "logreg": {
+          "accuracy": 0.4955,
+          "f1_weighted": 0.4858,
+          "f1_macro": 0.4212,
+          "precision_weighted": 0.5112,
+          "precision_macro": 0.4321,
+          "recall_weighted": 0.4955,
+          "recall_macro": 0.4569,
+          "balanced_accuracy": 0.4569,
+          "matthews_corrcoef": 0.1785,
+          "cohen_kappa": 0.1714,
+          "recall_priority_class": 0.434,
+          "precision_priority_class": 0.2218,
+          "f1_priority_class": 0.2936,
+          "pr_auc_priority_class": 0.241,
+          "roc_auc_priority_class": 0.6735,
+          "roc_auc_ovr_macro": 0.6559,
+          "log_loss": 1.0169,
+          "recall_priority_class_tuned": 0.4749,
+          "precision_priority_class_tuned": 0.2073,
+          "threshold_used": 0.35
+        },
+        "rf": {
+          "accuracy": 0.5417,
+          "f1_weighted": 0.5382,
+          "f1_macro": 0.4647,
+          "precision_weighted": 0.5403,
+          "precision_macro": 0.4647,
+          "recall_weighted": 0.5417,
+          "recall_macro": 0.4703,
+          "balanced_accuracy": 0.4703,
+          "matthews_corrcoef": 0.2221,
+          "cohen_kappa": 0.2207,
+          "recall_priority_class": 0.3116,
+          "precision_priority_class": 0.2603,
+          "f1_priority_class": 0.2837,
+          "pr_auc_priority_class": 0.2664,
+          "roc_auc_priority_class": 0.6878,
+          "roc_auc_ovr_macro": 0.6823,
+          "log_loss": 0.9709
+        },
+        "gb": {
+          "accuracy": 0.5254,
+          "f1_weighted": 0.533,
+          "f1_macro": 0.4673,
+          "precision_weighted": 0.5514,
+          "precision_macro": 0.4673,
+          "recall_weighted": 0.5254,
+          "recall_macro": 0.4888,
+          "balanced_accuracy": 0.4888,
+          "matthews_corrcoef": 0.2297,
+          "cohen_kappa": 0.2269,
+          "recall_priority_class": 0.4283,
+          "precision_priority_class": 0.2413,
+          "f1_priority_class": 0.3087,
+          "pr_auc_priority_class": 0.2754,
+          "roc_auc_priority_class": 0.6909,
+          "roc_auc_ovr_macro": 0.6843,
+          "log_loss": 0.971
+        },
+        "extra_trees": {
+          "accuracy": 0.5507,
+          "f1_weighted": 0.547,
+          "f1_macro": 0.4652,
+          "precision_weighted": 0.5446,
+          "precision_macro": 0.4712,
+          "recall_weighted": 0.5507,
+          "recall_macro": 0.4621,
+          "balanced_accuracy": 0.4621,
+          "matthews_corrcoef": 0.2274,
+          "cohen_kappa": 0.2272,
+          "recall_priority_class": 0.2157,
+          "precision_priority_class": 0.2773,
+          "f1_priority_class": 0.2426,
+          "pr_auc_priority_class": 0.2598,
+          "roc_auc_priority_class": 0.6768,
+          "roc_auc_ovr_macro": 0.6753,
+          "log_loss": 0.972
+        }
+      },
+      "llm_decisions_count": 11,
+      "retries": 2,
+      "training_errors_count": 2,
+      "feature_importance": [
+        {
+          "feature": "number_inpatient",
+          "importance": 0.2485,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "discharge_disposition_id",
+          "importance": 0.1083,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "number_emergency",
+          "importance": 0.0937,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "admission_type_id_plus_discharge_disposition_id",
+          "importance": 0.0909,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "number_diagnoses",
+          "importance": 0.0647,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "clinical_note",
+          "importance": 0.0643,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "diabetesMed",
+          "importance": 0.0544,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "discharge_disposition_id_plus_admission_source_id",
+          "importance": 0.0525,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "age",
+          "importance": 0.0472,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "race",
+          "importance": 0.0384,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "gender",
+          "importance": 0.037,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "number_outpatient",
+          "importance": 0.0365,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "admission_type_id",
+          "importance": 0.0354,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "metformin",
+          "importance": 0.0333,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "admission_source_id",
+          "importance": 0.0321,
+          "method": "abs_coefficients"
+        }
+      ],
+      "threshold_info": {
+        "threshold": 0.35,
+        "tuned_recall": 0.4749,
+        "tuned_precision": 0.2073,
+        "default_recall": 0.434,
+        "improved": true
+      },
+      "balance_strategy": "undersample",
+      "tool_calls_total": 19
+    },
+    {
+      "timestamp": "2026-04-28T03:18:26.995397",
+      "dataset": "../input/diabetic_data.csv",
+      "data_source_channel": "input_folder",
+      "target": "readmitted",
+      "task_type": "multiclass",
+      "detected_text_column": null,
+      "new_features": [
+        "number_inpatient_div_discharge_disposition_id",
+        "number_inpatient_div_number_diagnoses"
+      ],
+      "best_model": "logreg",
+      "best_score": 0.4977992957746479,
+      "best_metric": "recall_priority_class",
+      "metric_strategy": "medical_high_risk_multiclass",
+      "all_metrics": {
+        "logreg": {
+          "accuracy": 0.4898,
+          "f1_weighted": 0.4848,
+          "f1_macro": 0.4212,
+          "precision_weighted": 0.5096,
+          "precision_macro": 0.4297,
+          "recall_weighted": 0.4898,
+          "recall_macro": 0.4562,
+          "balanced_accuracy": 0.4562,
+          "matthews_corrcoef": 0.1744,
+          "cohen_kappa": 0.1684,
+          "recall_priority_class": 0.4415,
+          "precision_priority_class": 0.2192,
+          "f1_priority_class": 0.293,
+          "pr_auc_priority_class": 0.2421,
+          "roc_auc_priority_class": 0.6734,
+          "roc_auc_ovr_macro": 0.6563,
+          "log_loss": 1.0144,
+          "recall_priority_class_tuned": 0.4978,
+          "precision_priority_class_tuned": 0.2058,
+          "threshold_used": 0.35
+        },
+        "rf": {
+          "accuracy": 0.5436,
+          "f1_weighted": 0.5365,
+          "f1_macro": 0.4635,
+          "precision_weighted": 0.5365,
+          "precision_macro": 0.4654,
+          "recall_weighted": 0.5436,
+          "recall_macro": 0.4676,
+          "balanced_accuracy": 0.4676,
+          "matthews_corrcoef": 0.2183,
+          "cohen_kappa": 0.2163,
+          "recall_priority_class": 0.3002,
+          "precision_priority_class": 0.2747,
+          "f1_priority_class": 0.2869,
+          "pr_auc_priority_class": 0.258,
+          "roc_auc_priority_class": 0.6818,
+          "roc_auc_ovr_macro": 0.6776,
+          "log_loss": 0.9761
+        },
+        "gb": {
+          "accuracy": 0.5249,
+          "f1_weighted": 0.5319,
+          "f1_macro": 0.4677,
+          "precision_weighted": 0.55,
+          "precision_macro": 0.4673,
+          "recall_weighted": 0.5249,
+          "recall_macro": 0.4899,
+          "balanced_accuracy": 0.4899,
+          "matthews_corrcoef": 0.2286,
+          "cohen_kappa": 0.2257,
+          "recall_priority_class": 0.4349,
+          "precision_priority_class": 0.2453,
+          "f1_priority_class": 0.3137,
+          "pr_auc_priority_class": 0.279,
+          "roc_auc_priority_class": 0.6926,
+          "roc_auc_ovr_macro": 0.6843,
+          "log_loss": 0.9726
+        },
+        "extra_trees": {
+          "accuracy": 0.5562,
+          "f1_weighted": 0.5468,
+          "f1_macro": 0.4642,
+          "precision_weighted": 0.5414,
+          "precision_macro": 0.4766,
+          "recall_weighted": 0.5562,
+          "recall_macro": 0.4594,
+          "balanced_accuracy": 0.4594,
+          "matthews_corrcoef": 0.2246,
+          "cohen_kappa": 0.2236,
+          "recall_priority_class": 0.2073,
+          "precision_priority_class": 0.3062,
+          "f1_priority_class": 0.2472,
+          "pr_auc_priority_class": 0.256,
+          "roc_auc_priority_class": 0.6759,
+          "roc_auc_ovr_macro": 0.6734,
+          "log_loss": 0.9761
+        }
+      },
+      "llm_decisions_count": 11,
+      "retries": 2,
+      "training_errors_count": 2,
+      "feature_importance": [
+        {
+          "feature": "discharge_disposition_id",
+          "importance": 0.2573,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "number_inpatient_div_discharge_disposition_id",
+          "importance": 0.1646,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "number_inpatient_div_number_diagnoses",
+          "importance": 0.1003,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "number_emergency",
+          "importance": 0.0931,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "number_diagnoses",
+          "importance": 0.0769,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "number_inpatient",
+          "importance": 0.0634,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "diabetesMed",
+          "importance": 0.0528,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "number_outpatient",
+          "importance": 0.0373,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "age",
+          "importance": 0.034,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "metformin",
+          "importance": 0.033,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "weight",
+          "importance": 0.0243,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "medical_specialty",
+          "importance": 0.0219,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "diag_1",
+          "importance": 0.0214,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "num_lab_procedures",
+          "importance": 0.0205,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "num_procedures",
+          "importance": 0.0196,
+          "method": "abs_coefficients"
+        }
+      ],
+      "threshold_info": {
+        "threshold": 0.35,
+        "tuned_recall": 0.4978,
+        "tuned_precision": 0.2058,
+        "default_recall": 0.4415,
+        "improved": true
+      },
+      "balance_strategy": "undersample",
+      "tool_calls_total": 19
+    },
+    {
+      "timestamp": "2026-04-28T03:47:55.526191",
+      "dataset": "../input/diabetic_data.csv",
+      "data_source_channel": "input_folder",
+      "target": "readmitted",
+      "task_type": "multiclass",
+      "detected_text_column": "clinical_note",
+      "new_features": [
+        "time_in_hospital_x_num_medications",
+        "num_lab_procedures_x_num_procedures",
+        "number_inpatient_x_number_diagnoses",
+        "num_medications_div_time_in_hospital",
+        "number_outpatient_div_number_emergency",
+        "text_note_length",
+        "text_diabetes_term_count",
+        "text_medication_change_flag",
+        "text_insulin_status_terms",
+        "text_emergency_visit_count"
+      ],
+      "best_model": "logreg",
+      "best_score": 0.4898767605633803,
+      "best_metric": "recall_priority_class",
+      "metric_strategy": "medical_high_risk_multiclass",
+      "all_metrics": {
+        "logreg": {
+          "accuracy": 0.4929,
+          "f1_weighted": 0.4846,
+          "f1_macro": 0.4204,
+          "precision_weighted": 0.5106,
+          "precision_macro": 0.431,
+          "recall_weighted": 0.4929,
+          "recall_macro": 0.4565,
+          "balanced_accuracy": 0.4565,
+          "matthews_corrcoef": 0.1769,
+          "cohen_kappa": 0.1701,
+          "recall_priority_class": 0.4388,
+          "precision_priority_class": 0.2199,
+          "f1_priority_class": 0.293,
+          "pr_auc_priority_class": 0.2423,
+          "roc_auc_priority_class": 0.6745,
+          "roc_auc_ovr_macro": 0.6563,
+          "log_loss": 1.0157,
+          "recall_priority_class_tuned": 0.4899,
+          "precision_priority_class_tuned": 0.2098,
+          "threshold_used": 0.35
+        },
+        "rf": {
+          "accuracy": 0.5472,
+          "f1_weighted": 0.5395,
+          "f1_macro": 0.4662,
+          "precision_weighted": 0.5375,
+          "precision_macro": 0.4695,
+          "recall_weighted": 0.5472,
+          "recall_macro": 0.4675,
+          "balanced_accuracy": 0.4675,
+          "matthews_corrcoef": 0.2199,
+          "cohen_kappa": 0.2181,
+          "recall_priority_class": 0.2852,
+          "precision_priority_class": 0.2876,
+          "f1_priority_class": 0.2864,
+          "pr_auc_priority_class": 0.2556,
+          "roc_auc_priority_class": 0.6779,
+          "roc_auc_ovr_macro": 0.6758,
+          "log_loss": 0.9717
+        },
+        "gb": {
+          "accuracy": 0.5206,
+          "f1_weighted": 0.5288,
+          "f1_macro": 0.4623,
+          "precision_weighted": 0.5486,
+          "precision_macro": 0.4634,
+          "recall_weighted": 0.5206,
+          "recall_macro": 0.4842,
+          "balanced_accuracy": 0.4842,
+          "matthews_corrcoef": 0.224,
+          "cohen_kappa": 0.2209,
+          "recall_priority_class": 0.4247,
+          "precision_priority_class": 0.2337,
+          "f1_priority_class": 0.3015,
+          "pr_auc_priority_class": 0.2658,
+          "roc_auc_priority_class": 0.6814,
+          "roc_auc_ovr_macro": 0.6783,
+          "log_loss": 0.9753
+        },
+        "extra_trees": {
+          "accuracy": 0.5584,
+          "f1_weighted": 0.5471,
+          "f1_macro": 0.4539,
+          "precision_weighted": 0.5415,
+          "precision_macro": 0.4706,
+          "recall_weighted": 0.5584,
+          "recall_macro": 0.4507,
+          "balanced_accuracy": 0.4507,
+          "matthews_corrcoef": 0.2259,
+          "cohen_kappa": 0.2248,
+          "recall_priority_class": 0.1536,
+          "precision_priority_class": 0.2828,
+          "f1_priority_class": 0.1991,
+          "pr_auc_priority_class": 0.2447,
+          "roc_auc_priority_class": 0.6669,
+          "roc_auc_ovr_macro": 0.6707,
+          "log_loss": 0.9704
+        }
+      },
+      "llm_decisions_count": 11,
+      "retries": 2,
+      "training_errors_count": 2,
+      "feature_importance": [
+        {
+          "feature": "number_inpatient",
+          "importance": 0.4734,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "number_inpatient_x_number_diagnoses",
+          "importance": 0.2356,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "discharge_disposition_id",
+          "importance": 0.2262,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "number_emergency",
+          "importance": 0.0998,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "number_diagnoses",
+          "importance": 0.0785,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "clinical_note",
+          "importance": 0.0629,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "diabetesMed",
+          "importance": 0.0555,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "time_in_hospital_x_num_medications",
+          "importance": 0.0523,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "num_procedures",
+          "importance": 0.0465,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "age",
+          "importance": 0.0446,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "num_medications",
+          "importance": 0.038,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "race",
+          "importance": 0.0365,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "num_lab_procedures_x_num_procedures",
+          "importance": 0.0354,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "gender",
+          "importance": 0.035,
+          "method": "abs_coefficients"
+        },
+        {
+          "feature": "time_in_hospital",
+          "importance": 0.0349,
+          "method": "abs_coefficients"
+        }
+      ],
+      "threshold_info": {
+        "threshold": 0.35,
+        "tuned_recall": 0.4899,
+        "tuned_precision": 0.2098,
+        "default_recall": 0.4388,
+        "improved": true
+      },
+      "balance_strategy": "undersample",
+      "tool_calls_total": 0
+    }
+  ]
+}

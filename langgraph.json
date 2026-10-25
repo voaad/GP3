@@ -1,0 +1,7 @@
+{
+    "dependencies": ["."],
+    "graphs": {
+        "medical_pipeline": "./graph.py:graph"
+    },
+    "env": "./config/settings.env"
+}

@@ -1,0 +1,7 @@
+{
+  "best_model": "logreg",
+  "best_score": 0.4977992957746479,
+  "best_metric": "recall_priority_class",
+  "metric_strategy": "medical_high_risk_multiclass",
+  "timestamp": "2026-04-28T03:18:26.994729"
+}

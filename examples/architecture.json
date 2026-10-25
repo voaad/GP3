@@ -1,0 +1,111 @@
+{
+  "project": "Medical ML Prioritization Pipeline",
+  "framework": "LangGraph + LangChain",
+  "gateway": "OpenRouter",
+  "llm_models": {
+    "GPT-4o": {
+      "openrouter_id": "openai/gpt-4o",
+      "temperature": 0,
+      "max_tokens": 800,
+      "top_p": 0.9,
+      "usage": "structured analytical steps (EDA, feature engineering)"
+    },
+    "Gemini 2.5 Flash Lite": {
+      "openrouter_id": "google/gemini-2.5-flash-lite",
+      "temperature": 0,
+      "max_tokens": 500,
+      "top_p": 0.85,
+      "usage": "short structured decisions (topic, target, model pool)"
+    },
+    "Claude 3.5 Haiku": {
+      "openrouter_id": "anthropic/claude-3.5-haiku",
+      "temperature": 0.1,
+      "max_tokens": 600,
+      "top_p": 0.95,
+      "usage": "verification steps (self-critique, metric review)"
+    }
+  },
+  "prompting_techniques": [
+    "role prompting",
+    "two-step prompting (topic then target)",
+    "structured step-by-step",
+    "self-critique",
+    "contrastive prompting",
+    "metric and model review"
+  ],
+  "stages": [
+    {
+      "name": "load_memory",
+      "llm": null,
+      "action": "Load long-term memory"
+    },
+    {
+      "name": "ingest_data",
+      "llm": "Gemini",
+      "action": "Fetch CSV, infer topic, select target"
+    },
+    {
+      "name": "explore_data",
+      "llm": "GPT-4o",
+      "action": "EDA, imbalance flag"
+    },
+    {
+      "name": "analyze_text_column",
+      "llm": "Claude",
+      "action": "Detect free-text column, propose domain risk markers"
+    },
+    {
+      "name": "preprocess",
+      "llm": "Claude",
+      "action": "Imputation, outliers, encoding"
+    },
+    {
+      "name": "engineer_features",
+      "llm": "GPT-4o",
+      "action": "Feature engineering"
+    },
+    {
+      "name": "train_models",
+      "llm": "Gemini",
+      "action": "Train baseline models with light tuning"
+    },
+    {
+      "name": "evaluate_models",
+      "llm": "Claude",
+      "action": "Choose metric, pick and review best"
+    },
+    {
+      "name": "build_priority_list",
+      "llm": null,
+      "action": "Rank test set, write CSV"
+    },
+    {
+      "name": "save_memory",
+      "llm": null,
+      "action": "Persist best result if improved"
+    },
+    {
+      "name": "build_report",
+      "llm": null,
+      "action": "Aggregate HTML report"
+    }
+  ],
+  "non_linear_elements": [
+    "Conditional edge: ingest_data -> END on error",
+    "Conditional edge: explore_data -> END on error",
+    "Conditional edge: train_models -> END if no model trained",
+    "Inner loop inside train_models: models x hyperparameters with try/except",
+    "Conditional memory write: only if new_score >= prev_score"
+  ],
+  "memory": {
+    "short_term": "TypedDict State across nodes",
+    "long_term": "artifacts/ (best_metrics.json, run_log.json, *.pkl, priority_records.csv, run_report.html)"
+  },
+  "external_tools": {
+    "data": "pandas, numpy",
+    "ml": "scikit-learn",
+    "storage": "joblib, json",
+    "viz": "matplotlib, seaborn",
+    "fetch": "urllib.request, zipfile"
+  }
+}
